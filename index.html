@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        const year = new Date().getFullYear();
-        const fourthOfJuly = new Date(year, 6, 4).getTime();
-        console.log(fourthOfJuly);
+        const thedate = new Date();
+        thedate.setFullYear(2020, 9, 10);
+        thedate.setHours(15);
+        thedate.setMinutes(30, 0, 0);
 
         // countdown
         let timer = setInterval(function() {
@@ -15,7 +16,7 @@
             const today = new Date().getTime();
 
             // get the difference
-            const diff = fourthOfJuly - today;
+            const diff = thedate - today;
 
             // math
             let days = Math.floor(diff / (1000 * 60 * 60 * 24));
